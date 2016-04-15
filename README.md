@@ -1,4 +1,4 @@
-# docker-ml8-java-samplestack
+# docker-ml8-slush-discovery
 Dockerfile for MarkLogic 8 and Slush Discovery App
 
 ## Setup
