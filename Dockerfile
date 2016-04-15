@@ -9,6 +9,8 @@ RUN yum install -y nodejs
 # Install Git
 RUN yum -y install git
 RUN yum -y install ruby
+RUN ruby -v
+RUN which ruby
 
 WORKDIR /home
 RUN git clone https://github.com/ryanjdew/ml-slush-discovery-app.git
@@ -19,7 +21,7 @@ RUN git clone https://github.com/ryanjdew/ml-slush-discovery-app.git
 
 WORKDIR /home/ml-slush-discovery-app/
 RUN ./ml local bootstrap
-RUN ./ml local delpoy modules
+RUN ./ml local deploy modules
 RUN npm install bower && npm install gulp && npm install && bower install
 RUN gulp init-local
 
