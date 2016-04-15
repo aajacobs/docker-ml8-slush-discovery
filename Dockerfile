@@ -8,6 +8,7 @@ RUN yum install -y nodejs
 
 # Install Git
 RUN yum -y install git
+RUN yum -y install ruby
 
 WORKDIR /home
 RUN git clone https://github.com/ryanjdew/ml-slush-discovery-app.git
