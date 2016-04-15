@@ -15,9 +15,9 @@ RUN which ruby
 WORKDIR /home
 RUN git clone https://github.com/ryanjdew/ml-slush-discovery-app.git
 
-# RUN /etc/rc.d/init.d/MarkLogic start && sleep 5
-# RUN ifconfig
-# RUN curl 127.0.0.1:8001 -v
+RUN /etc/rc.d/init.d/MarkLogic start && sleep 5
+RUN ifconfig
+RUN curl 127.0.0.1:8001 -v
 
 WORKDIR /home/ml-slush-discovery-app/
 RUN ./ml local bootstrap
