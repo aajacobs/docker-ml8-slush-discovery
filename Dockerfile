@@ -3,10 +3,11 @@ MAINTAINER Andrew Jacobs <andrew.jacobs@marklogic.com>
 
 RUN yum update -y
 
+RUN curl --silent --location https://rpm.nodesource.com/setup | bash -
 RUN yum install -y nodejs
 
 # Install Git
-RUN yum install -y git
+RUN yum -y install git
 
 WORKDIR /home
 RUN git clone https://github.com/ryanjdew/ml-slush-discovery-app.git
