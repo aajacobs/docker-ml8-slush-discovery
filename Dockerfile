@@ -11,6 +11,7 @@ RUN yum -y install git
 RUN yum -y install ruby
 RUN ruby -v
 RUN which ruby
+RUN /etc/init.d/MarkLogic start
 
 WORKDIR /home
 RUN git clone https://github.com/ryanjdew/ml-slush-discovery-app.git
